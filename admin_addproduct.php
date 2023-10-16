@@ -16,7 +16,7 @@ if(isset($_POST['add_product'])){
     $message[]='please fill out all';
    }
     else{
-        $insert="INSERT INTO products(name,price,image) VALUES('$product_name','$product_price','$product_image')";
+        $insert="INSERT INTO productss(name,description,price,offer,category,image) VALUES('$product_name','$product_description','$product_price','$product_offer','$product_category','$product_image')";
         $upload=mysqli_query($conn,$insert);
         if($upload){
             move_uploaded_file($product_image_tmp_name,$product_image_folder);
