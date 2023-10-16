@@ -1,3 +1,35 @@
+
+<?php
+@include 'config.php';
+if(isset($_POST['add_product'])){
+    $product_name=$_POST['product_name'];
+     $product_price=$_POST['product_price'];
+    $product_description=$_POST['product_description'];
+    $product_offer=$_POST['product_offer'];
+    $product_category=$_POST['product_category'];
+    $product_image=$_FILES['product_image']['name'];
+    $product_image_tmp_name=$_FILES['product_image']['tmp_name'];
+    $product_image_folder='uploaded_images/'.$product_image;
+    
+   
+   if(empty($product_name) || empty($product_price) || empty($product_price)|| empty($product_image)||empty($product_offer)||empty($product_description)||empty($product_category)   ){
+    $message[]='please fill out all';
+   }
+    else{
+        $insert="INSERT INTO products(name,price,image) VALUES('$product_name','$product_price','$product_image')";
+        $upload=mysqli_query($conn,$insert);
+        if($upload){
+            move_uploaded_file($product_image_tmp_name,$product_image_folder);
+            $message[]='new product added successfully';
+
+        }
+        else{
+            $message[]='could not add the product';
+        }
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
