@@ -130,10 +130,10 @@ if(isset($_POST['add_product'])){
 <br />
 <label for="category">Product Category</label>
 <select type="text" id="category" placeholder="category" value="" name="product_category" class="box" required>
-                                <option value="eye">eye</option>
-                                <option value="beauty">Beauty</option>
-                                <option value="skincare">Skin-Care</option>
-                                <option value="lip">Lip</option>
+                                <option value="cross bags">cross bags</option>
+                                <option value="shoulder bags">shoulder bags</option>
+                                <option value="back packs">back packs</option>
+                                <option value="wallets">wallets</option>
                                 <option value="face">Face</option>
                             </select>
                        

@@ -7,7 +7,7 @@ $select=mysqli_query($conn,"SELECT * FROM productss");
 
 
 while($row = mysqli_fetch_assoc($select)){
-    if($row['category']=='eye'){
+    if($row['category']=='cross bags'){
 ?>
 
 <div class="box-container">
