@@ -65,3 +65,63 @@
         </aside>
        
         <!------------- End Of Sidebar ------------->
+        <main>
+        <?php
+    if(isset($message)){
+        foreach($message as $message){
+            echo '<span class="message">'.$message.'</span>';
+        }
+    }
+    
+    ?>
+        
+        <div class="containers">
+    <div class="admin-product-form-container">
+                <form action="<?php $_SERVER['PHP_SELF']?>" method ="post" enctype="multipart/form-data">
+   <h3>Add product</h3>
+   <input type="text" placeholder="enter product name" name="product_name" class="box">
+
+
+                     
+                        <br />
+                        <input type="text" placeholder="enter product description" name="product_description" class="box">
+
+
+                     
+<br />
+<input type="number" placeholder="enter product price" name="product_price" class="box">       
+
+<br />
+                           
+<input type="number" placeholder="enter product offer" name="product_offer" class="box">       
+
+<br />
+<label for="category">Product Category</label>
+<select type="text" id="category" placeholder="category" value="" name="product_category" class="box" required>
+                                <option value="eye">eye</option>
+                                <option value="beauty">Beauty</option>
+                                <option value="skincare">Skin-Care</option>
+                                <option value="lip">Lip</option>
+                                <option value="face">Face</option>
+                            </select>
+                       
+<input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
+
+
+
+
+
+<input type="submit" class="btn" name="add_product" value="add products">
+
+<br />
+
+</div>
+</div>                
+        </main>
+
+
+
+
+      
+
+</html>
