@@ -49,4 +49,44 @@ $_SESSION["Password"] = $row["Password"];
 
 </html>
 
+<?php
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $Email = htmlspecialchars($_POST["Email"]);
+    $OldPassword = htmlspecialchars($_POST["OldPassword"]);
+    $Password = htmlspecialchars($_POST["Password"]);
 
+    // Verify if the entered old password matches the stored password
+    $hashedOldPassword = $row['Password'];
+    if (!password_verify($OldPassword, $hashedOldPassword)) {
+        echo "Invalid old password.";
+        exit();
+    }
+
+    // Validate the new password
+    if (strlen($Password) < 8) {
+        echo "New password should be at least 8 characters long.";
+        exit();
+    }
+
+    // Update the password in the database
+    $hashedPassword = password_hash($Password, PASSWORD_DEFAULT);
+    $sql = "UPDATE users SET Password='$hashedPassword' WHERE ID = $userID";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        // Retrieve updated user data from the database
+        $sql = "SELECT * FROM users WHERE ID = $userID";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        // Update session variable
+        $_SESSION["Password"] = $row["Password"];
+
+        // Redirect to index.php or any other page
+        header("Location: Account.php");
+        exit();
+    } else {
+        echo "Error updating profile: " . mysqli_error($conn);
+    }
+}
+?>
