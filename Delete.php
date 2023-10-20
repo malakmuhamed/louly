@@ -1,11 +1,14 @@
 <?php
-session_start();
 include_once "includes/dbh.inc.php";
-// Check if the user is an administrator
-if (!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "admin") {
-    echo "You are not authorized to access this page.";
-    exit();
-}
+session_start();
+//lab task delete the user from database and destroy session
+// sql to delete a record
+$sql = "DELETE  FROM users WHERE ID =" . $_SESSION["ID"];
 
-include "Admin Dashboard.html";
+if (mysqli_query($conn, $sql)) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . mysqli_error($conn);
+}
+session_destroy();
 ?>
