@@ -78,3 +78,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redirect the user based on their user type
         if ($userType == "admin") {
             header("Location: admindashboard.php");
+        } else {
+            header("Location: homee.php");
+        }
+        exit();
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <?php include "signup.html"; ?>
+
+    <!-- Your remaining HTML content here -->
+
+</body>
+
+</html>
