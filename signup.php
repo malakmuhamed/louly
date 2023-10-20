@@ -58,3 +58,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($emailCount > 0) {
         $errors[] = "Email is already registered.";
+    }
+
+    if (!empty($errors)) {
+        // Display error messages to the user
+        foreach ($errors as $error) {
+            echo "<p>Error: $error</p>";
+        }
+    } else {
+        // Insert data into the database with default user type as "user"
+        $hashedPassword = password_hash($Password, PASSWORD_DEFAULT);
+        $userType = "user"; // Set default user type
+        $sql = "INSERT INTO users (FirstName, LastName, Email, Password, UserType) VALUES (?, ?, ?, ?, ?)";
+        $stmt = mysqli_prepare($conn, $sql);
+        mysqli_stmt_bind_param($stmt, "sssss", $Fname, $Lname, $Email, $hashedPassword, $userType);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+
+        // Redirect the user based on their user type
+        if ($userType == "admin") {
+            header("Location: admindashboard.php");
