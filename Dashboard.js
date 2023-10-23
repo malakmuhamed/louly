@@ -1,5 +1,3 @@
-
-
 const ThemeToggler=document.querySelector(".theme-toggler")
 
 ThemeToggler.addEventListener('click',() =>{
