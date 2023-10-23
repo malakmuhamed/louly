@@ -1,6 +1,6 @@
 
 <?php
-@include 'config.php';
+@include 'includes/dbh.inc.php';
 if(isset($_POST['add_product'])){
     $product_name=$_POST['product_name'];
      $product_price=$_POST['product_price'];
