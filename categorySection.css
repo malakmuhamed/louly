@@ -118,7 +118,7 @@ div {
 }
 a {
     background-color: transparent;
-    color: #464545;
+    color: #0b184d;
     text-decoration: none;
 }
 /* a:-webkit-any-link {
@@ -141,7 +141,7 @@ a {
 }
 .home-shop-by__title {
     bottom: -1.5625rem;
-    color: #7f2549;
+    color: #0b184d;
     left: 2.5rem;
     position: absolute;
     -webkit-transition: left .4s ease-in-out;

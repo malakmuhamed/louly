@@ -72,7 +72,7 @@ if (!empty($_SESSION['ID'])) {
     <!-- 1st container -->
     <div class="nav-div">
 
-      <img src="logo.jpg" class="brand-logo" alt="logo is here">
+      <img src="m.jpg" class="brand-logo" alt="logo is here">
 
       <!-- 2nd container of items and include another container -->
 
@@ -157,7 +157,7 @@ if (!empty($_SESSION['ID'])) {
   <!----------------------SLIDER BEST SELLER--------------------------------->
   <section class="product">
     <h2 class="product-category" style="font-family: 'EB+Garamond';
-    color: #7B0137; font-size: 40px;"> bestsellers</h2>
+    color: #0b184d; font-size: 40px;"> bestsellers</h2>
     <button class="pre-btn"><img src="arrow.png"></button>
     <button class="nxt-btn"><img src="arrow.png"></button>
     <!-- -------------------------------------------------------------------->
@@ -230,7 +230,7 @@ while($row = mysqli_fetch_assoc($select)){
   <section class="home-shop-by bg-peach">
     <div class="home-shop-by__container container container--medium section-header-wrap">
       <header class="section-header">
-        <i class="section-header__heading home-shop-by__heading" style="font-family:'EB+Garamond'; color:#7B0137;">Shop
+        <i class="section-header__heading home-shop-by__heading" style="font-family:'EB+Garamond'; color:#0b184d;">Shop
           by<br>Category</h3>
       </header>
       <div class="home-shop-by__row desktop-only">

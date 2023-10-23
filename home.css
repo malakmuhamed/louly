@@ -3,7 +3,7 @@
     src: url(GreatVibes-Regular.ttf);
 }
 body{
-  background-color: #fdf6f0;
+  background-color: #f5fbff;
 }
 .box{
     float: left;
@@ -27,7 +27,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color:#ab7084;
+  background-color:#0b184d;
   opacity: 0.2;
 }
 

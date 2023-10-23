@@ -13,7 +13,7 @@ footer{
  height: 100%;
   bottom: 0;
   left: 0;
-  background:#fdf6f0;
+  background:#f5fbff;
 }
 footer .content{
     content: '';
@@ -22,12 +22,12 @@ footer .content{
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  border: #7f2549 solid 0.5px;
+  border: #0b184d solid 0.5px;
   justify-content: space-between;
 }
 footer .content p,a{
     content: '';
-  color: #ab7084;
+  color: #0b184d;
 }
 footer .content .box{
     content: '';
@@ -38,7 +38,7 @@ footer .content .topic{
     content: '';
   font-size: 22px;
   font-weight: 600;
-  color: #7f2549;
+  color: #0b184d;
   margin-bottom: 16px;
 
 }
@@ -67,33 +67,33 @@ footer .content .right input[type="text"]{
   height: 45px;
   width: 100%;
   outline: none;
-  color:#ab70840;
-  background:#fdf6f0;
+  color:#0b184d;
+  background:#f5fbff;
   border-radius: 5px;
   padding-left: 10px;
   font-size: 17px;
-  border: 2px solid #ab7084;
+  border: 2px solid #0b184d;
 }
 footer .content .right input[type="submit"]{ 
     content: '';
   height: 42px;
   width: 100%;
   font-size: 18px;
-  color: #ab7084;
+  color: #0b184d;
   font-family: EB Garamond;
-  background: #fdf6f0;
+  background: #f5fbff;
   outline: none;
   border-radius: 5px;
   letter-spacing: 1px;
   cursor: pointer;
   margin-top: 12px;
-  border: 2px solid #ab7084;
+  border: 2px solid #0b184d;
   transition: all 0.3s ease-in-out;
 }
 .content .right input[type="submit"]:hover{
     content: '';
   background: none;
-  color: #ab7084;
+  color: #0b184d;
 }
 footer .content .media-icons a{
     content: '';
@@ -104,22 +104,22 @@ footer .content .media-icons a{
   text-align: center;
   line-height: 43px;
   border-radius: 5px;
-  border: 2px solid #ab7084;
+  border: 2px solid #0b184d;
   margin: 30px 5px 0 0;
   transition: all 0.3s ease;
 }
 .content .media-icons a:hover{
-  border-color:#ab7084;
+  border-color:#0b184d;
 }
 footer .bottom{
 
   width: 100%;
   text-align: right;
-  color:#ab7084;
+  color:#0b184d;
   padding: 0 40px 5px 0;
 }
 footer .bottom a{
-  color: #ab7084;
+  color: #0b184d;
 }
 footer a{
   transition: all 0.3s ease;
