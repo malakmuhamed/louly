@@ -60,10 +60,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Email is already registered.";
     }
 
-    if (!empty($errors)) {
-        // Display error messages to the user
-        foreach ($errors as $error) {
-            echo "<p>Error: $error</p>";
+    if(isset($errors)){
+        foreach($errors as $errors){
+            echo '<span class="message">'.$errors.'</span>';
         }
     } else {
         // Insert data into the database with default user type as "user"
@@ -88,6 +87,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin add-Product</title>
+   
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+<style>
+
+    </style>
+</head>
+
 
 <body>
     <?php include "signup.html"; ?>

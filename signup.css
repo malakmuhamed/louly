@@ -3,6 +3,7 @@ body{
     background-image: url(ezgif.com-webp-to-jpg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background:#f5fbff;
 }
 .createAndBenefits{
     display:flex;
@@ -104,4 +105,13 @@ div[class="benefits"]{
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 0.2em;
     font-weight: 500;
+}
+.message{
+    /* display: block; */
+ background-color:white;
+    padding:1rem .5rem;
+    font-size:1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    font
 }
