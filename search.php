@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";  
-$username   = "root";  
-$password   = "";  
-$dbname     = "trial";  
-// Create connection  
-$conn  = new mysqli($servername, $username, $password, $dbname);  
-// Check connection  
-if ($conn->connect_error) {  
-    die("Connection failed: " . $conn->connect_error);  
-}  
+include_once "includes/dbh.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +23,7 @@ if ($conn->connect_error) {
                 if(isset($_POST['submit'])){
                     $search=$_POST['search'];
 
-                    $sql="Select * from `users` where fname='$search'";
+                    $sql="Select * from `users` where FirstName='$search'";
                     $result= mysqli_query($conn,$sql);
                     if($result){
                         if(mysqli_num_rows($result)>0)
@@ -49,9 +40,9 @@ if ($conn->connect_error) {
                                 echo'
                                 <tbody>
                                 <tr>
-                                    <td>'.$row['id'].'</td>
-                                    <td>'.$row['fname'].'</td>
-                                    <td>'.$row['email'].'</td>
+                                    <td>'.$row['ID'].'</td>
+                                    <td>'.$row['FirstName'].'</td>
+                                    <td>'.$row['Email'].'</td>
                                 </tr>
                                 </tbody>';
                             }
