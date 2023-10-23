@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 @include 'includes/dbh.inc.php';
 if(isset($_POST['add_product'])){
     $product_name=$_POST['product_name'];

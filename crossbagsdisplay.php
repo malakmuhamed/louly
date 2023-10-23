@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "makeup.html";
 @include 'includes/dbh.inc.php';
 $select=mysqli_query($conn,"SELECT * FROM productss");
@@ -6,6 +7,7 @@ $select=mysqli_query($conn,"SELECT * FROM productss");
 <?php
 
 
+session_start();
 while($row = mysqli_fetch_assoc($select)){
     if($row['category']=='cross bags'){
 ?>

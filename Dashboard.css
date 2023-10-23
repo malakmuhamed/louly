@@ -2,18 +2,18 @@
 
 /* ------------- ROOT VARIABLES ------------- */
 :Root{
---color-primary:#E4B7A0;
---color-danger:#c9747b;
---color-success:#A45C40;
---color-warning:#C38370;
---color-white:RGB(253 246 240);
---color-info-dark:#7b0137;
---color-info-light:#7b0137;
---color-dark:#7b0137;
---color-light:rgba(0, 0, 0, 0.18); 
---color-primary-variant:#1414ef;
+--color-primary:#f5fbff;
+--color-danger:#0b184d;
+--color-success:#0b184d;
+--color-warning:#0b184d;
+--color-white:#cae4f5;
+--color-info-dark:#0b184d;
+--color-info-light:#0b184d;
+--color-dark:#f5fbff;
+--color-light:#f5fbff; 
+--color-primary-variant:#0b184d;
 --color-dark-variant:#000000;
---color-background:#fcf1e0;
+--color-background:#f5fbff;
 
 --card--border-radius:2rem;
 --border-radius-1:0.4rem;
@@ -26,17 +26,7 @@
 --box-shadow:0 2rem 3rem var(--color-light);
 }          
 
-*{
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    box-sizing:none;
-    appearance:none;
-    text-decoration:none;
-    list-style:none;
 
-}
 
 /* ------------- Dark Theme Variables ------------- */
 
@@ -44,7 +34,7 @@
     --color-background:#181a1e;
     --color-white:#202528;
     --color-dark:#edeffd;
-    --color-dark-variant:#a3bdcc;
+    --color-dark-variant:#0b184d;
     --color-light:rgba(0,0,0,0.4);
     --box-shadow:0 2rem 3rem var(--color-light);
 }
@@ -84,22 +74,22 @@ img{
 h1{
     font-weight:800;
     font-size:1.8rem;
-    color: #7b0137;
+    color: #0b184d;
 }
 
 h2{
     font-size:1.4rem;
-    color: #7b0137;
+    color: #0b184d;
 }
 
 h3{
     font-size:0.87rem;
-    color: #7b0137;
+    color: #0b184d;
 }
 
 h4{
     font-size:0.8rem;
-    color: #7b0137;
+    color: #0b184d;
 }
 
 h5{
@@ -149,7 +139,7 @@ aside{
     height:10vh;
 }
 th{
-    color: #7b0137;
+    color: #0b184d;
 }
 
 aside .top{

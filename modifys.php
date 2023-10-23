@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('includes/dbh.inc.php');
 
 if (isset($_GET['id']) && isset($_POST['edit_product'])) {

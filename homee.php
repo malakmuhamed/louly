@@ -131,8 +131,7 @@ if (!empty($_SESSION['ID'])) {
       </video>
 
       <div class="text">
-        <!-- <h1>Jamila</h1> -->
-        <!-- <p>Lorem ipsum dolor sit amet,lum magnam reprehenderit.</p> -->
+       
 
       </div>
 
@@ -161,16 +160,18 @@ if (!empty($_SESSION['ID'])) {
     <button class="pre-btn"><img src="arrow.png"></button>
     <button class="nxt-btn"><img src="arrow.png"></button>
     <!-- -------------------------------------------------------------------->
-    <div class="product-container">
+    
     <?php
+   
 while($row = mysqli_fetch_assoc($select)){
     if($row['offer']>1){
 ?>
-
+ <div class="product-container">
 <div class="product-card">
-        <div class="product-image">
+        <div class="product-image " style>
           <span class="discount-tag">50% off</span>
-          <img src="uploaded_images/<?php echo $row['image'];?>" height="100" alt="">
+          <img src="uploaded_images/<?php echo $row['image'];?>" alt="">
+
           <button class="card-btn"> Add To Bag</button>
         </div>
 
@@ -185,13 +186,13 @@ while($row = mysqli_fetch_assoc($select)){
        
        
          <h3><?php echo $row['price'];?></h3>
-                                </span>
+  </span>
         </div>
 
       </div>
 
 
-     
+      
       <?php
 
 }}

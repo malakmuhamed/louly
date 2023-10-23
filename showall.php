@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('includes/dbh.inc.php');
 $sql="SELECT * FROM `productss`  ";
 $result=$conn->query($sql);
