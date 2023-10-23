@@ -1,0 +1,101 @@
+
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Add margin for spacing */
+  }
+  
+  /* Style table headers */
+  th {
+    background-color: rgb(255, 255, 255); /* Background color for header cells */
+    color: #9d7575; /* Text color for header cells */
+    font-weight: bold; /* Bold font for header cells */
+    text-align: left; /* Left-align text in header cells */
+    padding: 10px; /* Padding for header cells */
+    border: 1px solid rgb(159, 132, 132); /* Border for header cells */
+    -webkit-text-stroke: 0.5px rgb(159, 132, 132); /* Webkit browsers (e.g., Chrome) */
+  text-stroke: 0.5px rgb(210,173,173)
+  }
+  /* Style table data cells */
+  td {
+    padding: 8px; /* Padding for data cells */
+    border: 1px solid  rgb(159, 132, 132); /* Border for data cells */
+  }
+  
+  /* Add zebra striping to alternate rows for better readability */
+  tr:nth-child(even) {
+    background-color: rgb(198, 169, 171); /* Background color for even rows */
+  }
+  /* Add these CSS styles to your existing CSS or in your external CSS file (showall.css) */
+
+/* Style for the button container */
+.btn-group {
+    display: inline-block;
+  }
+  
+  /* Style for the Edit button */
+  .btn-secondary {
+    background-color: #e3c9c1;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none; /* Remove underline on links */
+    margin-right: 5px; /* Add spacing between buttons */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #884d4d; /* Change background color on hover */
+  }
+  
+  /* Style for the Delete button */
+  .btn-danger {
+    background-color: #813a42;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none; /* Remove underline on links */
+  }
+  
+  .btn-danger:hover {
+    background-color: #A62639; /* Change background color on hover */
+  }
+  
+  /* Add these CSS styles to your existing CSS or in your external CSS file (showall.css) */
+
+/* Style the .jumbotron and h1 element */
+.jumbotron {
+    background-color: rgb(198,169,171); /* Background color for the jumbotron */
+    text-align: center; /* Center-align text within the jumbotron */
+    padding: 20px 0; /* Add padding to top and bottom of the jumbotron */
+    margin-bottom: 20px; /* Add margin to separate it from the container */
+  }
+  
+  .jumbotron h1 {
+    font-size: 36px; /* Adjust the font size as needed */
+    color: #fff; /* Text color for the title */
+    text-transform: uppercase; /* Convert text to uppercase */
+  }
+  
+  /* Example: Add a box shadow for a subtle effect */
+  .jumbotron {
+    box-shadow: 0 2px 5px rgba(171, 179, 119, 0.2);
+  }
+  /* center-table.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* This ensures that the container takes up the full viewport height. You can adjust this value as needed. */
+}
+
+.table {
+  width: 80%; /* Adjust the width of the table as needed. */
+}
+
+  
+  
