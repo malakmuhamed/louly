@@ -1,8 +1,15 @@
 
 <?php
-session_start();
+
+
 include_once "includes/dbh.inc.php";
-include "index.html";
+
+$select=mysqli_query($conn,"SELECT *FROM productss");
+?>
+<?php
+session_start();
+
+
 $firstName = '';
 
 if (!empty($_SESSION['ID'])) {
@@ -19,12 +26,53 @@ if (!empty($_SESSION['ID'])) {
 }
 
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,800&family=Poppins:wght@300&display=swap');
+  </style>
+  <link rel="stylesheet" href="categorySection.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="scale.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="video.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="slider.css">
+  <link rel="stylesheet" href="roundedSection.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="b">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <script src="video.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jamila</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,100;1,300&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <script src="main.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,100;1,300&display=swap');
+  </style>
+
+
+</head>
+<body>
 <nav class="navbar">
     <!-- 1st container -->
     <div class="nav-div">
 
-      <img src="R.png" class="brand-logo" alt="logo is here">
+      <img src="logo.jpg" class="brand-logo" alt="logo is here">
 
       <!-- 2nd container of items and include another container -->
 
@@ -55,14 +103,255 @@ if (!empty($_SESSION['ID'])) {
       </div>
     </div>
     <ul class="links-container">
-      <li class="link-item"><a href="index.html" class="link">home</a> </li>
-      <li class="link-item"><a href="skincare.html" class="link">Cross Bags</a> </li>
-      <li class="link-item"><a href="Allmakeup.html" class="link">Shoulder Bags</a> </li>
-      <li class="link-item"><a href="makeup.html" class="link">Back packs</a> </li>
-      <li class="link-item"><a href="facemakeup.html" class="link">Wallets</a> </li>
+      <li class="link-item"><a href="home.php" class="link">home</a> </li>
+      <li class="link-item"><a href="crossbagsdisplay.php" class="link">Cross Bags</a> </li>
+      <li class="link-item"><a href="crossbagsdisplay.php" class="link">Shoulder Bags</a> </li>
+      <li class="link-item"><a href="crossbagsdisplay.php" class="link">Back packs</a> </li>
+      <li class="link-item"><a href="crossbagsdisplay.php" class="link">Wallets</a> </li>
       <!-- <li class="link-item"><a href="eyemakeup.html" class="link">Eye</a> </li> -->
 
     </ul>
 
   </nav>
+  <section>
+    <div class="container">
+      <video autoplay muted id="video1" class="video1">
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+
+      <video autoplay muted id="video2" class="video2">
+        <source src="video2.mp4" type="video/mp4">
+      </video>
+
+      <video autoplay muted id="video3" class="video3">
+        <source src="video3.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted id="video4" class="video4">
+        <source src="video4.mp4" type="video/mp4">
+      </video>
+
+      <div class="text">
+        <!-- <h1>Jamila</h1> -->
+        <!-- <p>Lorem ipsum dolor sit amet,lum magnam reprehenderit.</p> -->
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script src="video.js"></script>
+
+
+
+
+
+
+
+
+
+  <script src="js/"></script>
+
+
+  <!----------------------SLIDER BEST SELLER--------------------------------->
+  <section class="product">
+    <h2 class="product-category" style="font-family: 'EB+Garamond';
+    color: #7B0137; font-size: 40px;"> bestsellers</h2>
+    <button class="pre-btn"><img src="arrow.png"></button>
+    <button class="nxt-btn"><img src="arrow.png"></button>
+    <!-- -------------------------------------------------------------------->
+    <div class="product-container">
+    <?php
+while($row = mysqli_fetch_assoc($select)){
+    if($row['offer']>1){
+?>
+
+<div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">50% off</span>
+          <img src="uploaded_images/<?php echo $row['image'];?>" height="100" alt="">
+          <button class="card-btn"> Add To Bag</button>
+        </div>
+
+        <div class="product-info">
+
+        <h3><?php echo $row['name'];?></h3>
+        <span class="price">
+        <h3><?php echo ($row['price'] - ($row['price'] * $row['offer']/100));?></h3>
+    </span>
+        <span class="actual-price">
+      
+       
+       
+         <h3><?php echo $row['price'];?></h3>
+                                </span>
+        </div>
+
+      </div>
+
+
+     
+      <?php
+
+}}
+?>
+    </div>
+
+  </section>
+  <script src="js/nav.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <header class="hero-section">
+
+
+
+
+  </header>
+
+  <script src="js/"></script>
+
+
+
+
+
+
+
+  <!-- category section -->
+  <section class="home-shop-by bg-peach">
+    <div class="home-shop-by__container container container--medium section-header-wrap">
+      <header class="section-header">
+        <i class="section-header__heading home-shop-by__heading" style="font-family:'EB+Garamond'; color:#7B0137;">Shop
+          by<br>Category</h3>
+      </header>
+      <div class="home-shop-by__row desktop-only">
+        <div class="home-shop-by__col">
+          <div class="home-shop-by__item home-shop-by__item--1">
+            <a href="crossbagsdisplay.php" class="home-shop-by__link" title="crossbag"><img src="crossbag.jpg" style="width:90%;"></a>
+          </div>
+
+        </div>
+        <div class="home-shop-by__col">
+          <div class="home-shop-by__item--2">
+            <a href="crossbagsdisplay.php" class="home-shop-by__link" title="waist"><img src="waistbag.jpg"
+                style="width:70%;"></a>
+
+
+          </div>
+          <div class="home-shop-by__item--3">
+            <a href="crossbagsdisplay.php" class="home-shop-by__link" title="handbag"><img src="handbag.jpg"
+                style="width:50%;"></a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="rounded">
+    <div class="home-learn-more__content">
+
+
+
+
+    </div>
+
+
+    <div class="circle circle1">
+      <img src="rounded.jpg">
+    </div>
+
+
+    <h2>What does Louly mean?</h2>
+    <p class="prounded" style="font-size: 1.25rem ;">Louly can be defined as a quality in someone or something that
+      makes it attractive and interesting in our eyes
+      Real beauty isn't about symmetry or weight or makeup: it's about looking life right in the face and seeing all its
+      magnificence reflected in your own
+      The famous English saying goes, “Beauty lies in the eyes of the beholder .”
+    </p>
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="footers">
+
+    <footer>
+      <div class="content" style="border:none;">
+        <div class="left box">
+          <div class="upper">
+            <div class="topic">About us</div>
+            <p>jamila's shop is where you feel the most jamila</p>
+          </div>
+          <div class="lower">
+            <div class="topic">Contact us</div>
+            <div class="phone">
+              <a href="#"><i class="fas fa-phone-volume"></i>01119988687</a>
+            </div>
+            <div class="email">
+              <a href="#"><i class="fas fa-envelope"></i>jamila@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="middle box">
+          <div class="topic">Our Services</div>
+          <div><a href="#">Get Help</a></div>
+          <div><a href="#">Shipping</a></div>
+          <div><a href="#">Returns</a></div>
+          <div><a href="#">order Status</a></div>
+          <div><a href="#">payment options</a></div>
+
+        </div>
+        <div class="right box">
+          <div class="topic">Subscribe us</div>
+          <form action="#">
+            <input type="text" placeholder="Enter email address">
+            <input type="submit" name="" value="Send">
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </footer>
+
+  </section>
+
+
+
+
+
+  <script src="slider.js"></script>
+  <script type="text/javascript" src="slider.js"></script>
+
+</body>
 </html>
