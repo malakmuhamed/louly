@@ -1,11 +1,10 @@
 <?php
-
-
-
 include_once "includes/dbh.inc.php";
-include "Account.html";
+
 
 session_start();
+
+$errors = []; // Initialize an array to store error messages
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Email = $_POST["Email"];
@@ -29,24 +28,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($_SESSION["UserType"] == "admin") {
                 header("Location: admindashboard.php");
+                exit();
             } else {
                 header("Location: homee.php");
+                exit();
             }
-            exit();
         } else {
-            echo "Invalid password.";
+            $errors[] = "Invalid password.";
         }
     } else {
-        echo "Email does not exist.";
+        $errors[] = "Email does not exist.";
     }
 }
 
-// Add the code below to prevent non-admin users from accessing the admindashboard.php page
-if (isset($_SESSION["UserType"]) && $_SESSION["UserType"] !== "admin") {
-    echo "You are not authorized to access this page.";
-    exit();
+$currentPage = basename($_SERVER["SCRIPT_NAME"]);
+
+if (($currentPage === "admin_addproduct.php" || $currentPage === "admindashboard.php" ) && (!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "admin")) {
+    $errors[] = "You are not authorized to access this page.";
 }
 
-
-
+// Display error messages
+if (!empty($errors)) {
+    echo '<div id="error-messages">';
+    echo '<div class="error-container">';
+    echo '<h2>Error(s) occurred:</h2>';
+    echo '<ul class="error-list">';
+    foreach ($errors as $error) {
+        echo "<li>$error</li>";
+    }
+    echo '</ul>';
+    echo '</div>';
+    echo '</div>';
+}
 ?>
+<html lang="en">
+
+<body>
+    <?php include "Account.html"; ?>
+
+    <!-- Your remaining HTML content here -->
+
+    <div id="error-messages">
+        <?php
+        if (!empty($errors)) {
+            echo '<div class="error-container">';
+           
+            echo '<ul class="error-list">';
+            foreach ($errors as $error) {
+                echo "<li>$error</li>";
+            }
+            echo '</ul>';
+            echo '</div>';
+        }
+        ?>
+    </div>
+
+</body>
+
+</html>

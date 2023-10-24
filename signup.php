@@ -60,10 +60,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Email is already registered.";
     }
 
-    if(isset($errors)){
-        foreach($errors as $errors){
-            echo '<span class="message">'.$errors.'</span>';
+    if (!empty($errors)) {
+        // Display error messages to the user
+        echo '<div id="error-messages">';
+        echo '<div class="error-container">';
+        echo '<h2>Error(s) occurred during sign-up:</h2>';
+        echo '<ul class="error-list">';
+        foreach ($errors as $error) {
+            echo "<li>$error</li>";
         }
+        echo '</ul>';
+        echo '</div>';
+        echo '</div>';
     } else {
         // Insert data into the database with default user type as "user"
         $hashedPassword = password_hash($Password, PASSWORD_DEFAULT);
@@ -78,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($userType == "admin") {
             header("Location: admindashboard.php");
         } else {
-            header("Location: homee.php");
+            header("Location: Account.php");
         }
         exit();
     }
@@ -87,25 +95,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin add-Product</title>
-   
-    <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="Dashboard.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
-<style>
-
-    </style>
-</head>
-
 
 <body>
     <?php include "signup.html"; ?>
 
     <!-- Your remaining HTML content here -->
+
+    <div id="error-messages">
+        <?php
+        if (!empty($errors)) {
+            echo '<div class="error-container">';
+           
+            echo '<ul class="error-list">';
+            foreach ($errors as $error) {
+                echo "<li>$error</li>";
+            }
+            echo '</ul>';
+            echo '</div>';
+        }
+        ?>
+    </div>
 
 </body>
 

@@ -7,7 +7,6 @@ $select=mysqli_query($conn,"SELECT * FROM productss");
 <?php
 
 
-session_start();
 while($row = mysqli_fetch_assoc($select)){
     if($row['category']=='cross bags'){
 ?>
