@@ -16,7 +16,7 @@ while($row = mysqli_fetch_assoc($select)){
 <div class="box">
     <div class="container">
         <div class="img">
-        <img src="uploaded_images/<?php echo $row['image'];?>" height="100" alt="">
+        <img src="<?php echo $row['image'];?>" height="100" alt="">
 
 
         </div>
@@ -26,6 +26,7 @@ while($row = mysqli_fetch_assoc($select)){
     <div class="content">
         <h3><?php echo $row['name'];?></h3>
         <h3><?php echo $row['description'];?></h3>
+        <a href="productdetail.php">
         <div style="margin:10px ;padding:10px" class="main">
             <i class="fa fa-star checked" id="one"></i>
             <i class="fa fa-star unchecked" id="two"></i>
