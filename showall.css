@@ -1,101 +1,100 @@
-
+/* styles.css */
 
 /* Style the table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0; /* Add margin for spacing */
-  }
-  
-  /* Style table headers */
-  th {
-    background-color: rgb(255, 255, 255); /* Background color for header cells */
-    color: #9d7575; /* Text color for header cells */
-    font-weight: bold; /* Bold font for header cells */
-    text-align: left; /* Left-align text in header cells */
-    padding: 10px; /* Padding for header cells */
-    border: 1px solid rgb(159, 132, 132); /* Border for header cells */
-    -webkit-text-stroke: 0.5px rgb(159, 132, 132); /* Webkit browsers (e.g., Chrome) */
-  text-stroke: 0.5px rgb(210,173,173)
-  }
-  /* Style table data cells */
-  td {
-    padding: 8px; /* Padding for data cells */
-    border: 1px solid  rgb(159, 132, 132); /* Border for data cells */
-  }
-  
-  /* Add zebra striping to alternate rows for better readability */
-  tr:nth-child(even) {
-    background-color: rgb(198, 169, 171); /* Background color for even rows */
-  }
-  /* Add these CSS styles to your existing CSS or in your external CSS file (showall.css) */
-
-/* Style for the button container */
-.btn-group {
-    display: inline-block;
-  }
-  
-  /* Style for the Edit button */
-  .btn-secondary {
-    background-color: #e3c9c1;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    text-decoration: none; /* Remove underline on links */
-    margin-right: 5px; /* Add spacing between buttons */
-  }
-  
-  .btn-secondary:hover {
-    background-color: #884d4d; /* Change background color on hover */
-  }
-  
-  /* Style for the Delete button */
-  .btn-danger {
-    background-color: #813a42;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    text-decoration: none; /* Remove underline on links */
-  }
-  
-  .btn-danger:hover {
-    background-color: #A62639; /* Change background color on hover */
-  }
-  
-  /* Add these CSS styles to your existing CSS or in your external CSS file (showall.css) */
-
-/* Style the .jumbotron and h1 element */
-.jumbotron {
-    background-color: rgb(198,169,171); /* Background color for the jumbotron */
-    text-align: center; /* Center-align text within the jumbotron */
-    padding: 20px 0; /* Add padding to top and bottom of the jumbotron */
-    margin-bottom: 20px; /* Add margin to separate it from the container */
-  }
-  
-  .jumbotron h1 {
-    font-size: 36px; /* Adjust the font size as needed */
-    color: #fff; /* Text color for the title */
-    text-transform: uppercase; /* Convert text to uppercase */
-  }
-  
-  /* Example: Add a box shadow for a subtle effect */
-  .jumbotron {
-    box-shadow: 0 2px 5px rgba(171, 179, 119, 0.2);
-  }
-  /* center-table.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* This ensures that the container takes up the full viewport height. You can adjust this value as needed. */
+body{
+  background-color: #f1f4f7;
+}
+table.table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.table {
-  width: 80%; /* Adjust the width of the table as needed. */
+table.table th, table.table td {
+  border: 2px solid #273b8b;
+  padding: 8px;
+  color: #1e2f75;
 }
 
+table.table th {
+  background-color: #bdc6e1;
+  font-weight: bold;
   
-  
+}
+table.table td {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto; /* Add this line to center the table horizontally */
+}
+ a.btn-danger:hover {
+  background-color: #55b3cf; /* Change the background color on hover for the Danger button */
+}
+
+
+/* Style the image */
+#productImageId {
+  max-width: 100px;
+  max-height: 100px;
+}
+/* Center the h1 element */
+h1 {
+  text-align: center;
+  color: #273b8b;;
+}
+
+/* Style the action buttons */
+.btn-group a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background-color: #2771c0;
+  color: #fff;
+  text-decoration: none;
+}
+a.btn-secondary:hover {
+  background-color: #19175c; /* Change the background color on hover for the Danger button */
+}
+.btn-danger {
+  background-color: #273b8b;
+  color: #fff;
+  text-decoration: none;
+}
+table tr:nth-child(2n) {
+  background-color: #acbbe7; /* Background color for even rows */
+}
+/* search-styles.css */
+
+
+/* Style for the search input */
+input[name="search"] {
+  padding: 10px;
+  border: 1px solid #273b8b;
+  border-radius: 5px;
+  margin-right: 90px;
+  font-size: 16px;
+}
+
+/* Style for the search button */
+button[name="submitsearch"] {
+  padding: 10px 20px;
+  background-color: #273b8b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Style for the search button on hover */
+button[name="submitsearch"]:hover {
+  background-color: #0056b3;
+}

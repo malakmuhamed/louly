@@ -20,12 +20,12 @@ $result=$conn->query($sql);
   </head>
   <body>
     
-  
+ 
     <div class="container">
-    <form method="post">
-            <input type="text" placeholder="Search Users" name="search" >
-            <button class="sbtn" name="submitsearch">Search</button>
-        </form>
+    <form method="post" class="search-form">
+        <input type="text" placeholder="Search by ID for Product" name="search" class="search-input">
+        <button class="sbtn" name="submitsearch">Search</button>
+      </form>
         <table class="table table-striped table-borderrer">
             <tr>
                 <th>ID</th>
