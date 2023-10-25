@@ -12,6 +12,7 @@ include_once "includes/dbh.inc.php";
     <link rel="stylesheet" href="search.css">
 </head>
 <body>
+    <!-- comment -->
     <div class="container">
         <form method="post">
             <input type="text" placeholder="Search Users" name="search" >
