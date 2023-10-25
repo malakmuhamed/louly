@@ -72,7 +72,7 @@ if (!empty($_SESSION['ID'])) {
     <!-- 1st container -->
     <div class="nav-div">
 
-      <img src="m.jpg" class="brand-logo" alt="logo is here">
+      <img src="loulylogo.png" class="brand-logo" alt="logo is here">
 
       <!-- 2nd container of items and include another container -->
 
