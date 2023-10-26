@@ -277,7 +277,7 @@ while($row = mysqli_fetch_assoc($select)){
     <h2>What does Louly mean?</h2>
     <p class="prounded" style="font-size: 1.25rem ;">Louly can be defined as a quality in someone or something that
       makes it attractive and interesting in our eyes
-      Real beauty isn't about symmetry or weight or makeup: it's about looking life right in the face and seeing all its
+      Real beauty isn't about symmetry: it's about looking life right in the face and seeing all its
       magnificence reflected in your own
       The famous English saying goes, “Beauty lies in the eyes of the beholder .”
     </p>
@@ -306,7 +306,7 @@ while($row = mysqli_fetch_assoc($select)){
         <div class="left box">
           <div class="upper">
             <div class="topic">About us</div>
-            <p>jamila's shop is where you feel the most jamila</p>
+            <p>Louly's shop is your distenation for everyday styling </p>
           </div>
           <div class="lower">
             <div class="topic">Contact us</div>
@@ -314,7 +314,7 @@ while($row = mysqli_fetch_assoc($select)){
               <a href="#"><i class="fas fa-phone-volume"></i>01119988687</a>
             </div>
             <div class="email">
-              <a href="#"><i class="fas fa-envelope"></i>jamila@gmail.com</a>
+              <a href="#"><i class="fas fa-envelope"></i>Louly@gmail.com</a>
             </div>
           </div>
         </div>

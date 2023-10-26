@@ -64,11 +64,11 @@ if(isset($_POST['add_product'])){
                 </div>
             </div>
             <div class="sidebar">
-               <a href="#" class="active">
+               <a href="admindashboard.php" class="active">
                 <span class="material-icons-sharp">grid_view</span>
                 <h3>Dashboard</h3>
                </a> 
-               <a href="#">
+               <a href="search.php">
                 <span class="material-icons-sharp">person</span>
                 <h3>Users Accounts</h3>
                </a> 
@@ -80,11 +80,11 @@ if(isset($_POST['add_product'])){
                 <span class="material-icons-sharp">receipt_long</span>
                 <h3>Add product</h3>
                </a> 
-               <a href="#">
+               <a href="edits.php">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Edit Product</h3>
                </a> 
-               <a href="#">
+               <a href="edits.php">
                 <span class="material-icons-sharp">mail_outline</span>
                 <h3>Delete product</h3>
                 <span class="message-count">26</span>
@@ -94,7 +94,7 @@ if(isset($_POST['add_product'])){
                 <span class="material-icons-sharp">report_gmailerrorred</span>
                 <h3>Orders</h3>
                </a> 
-               <a href="#">
+               <a href="Account.php">
                 <span class="material-icons-sharp">logout</span>
                 <h3>Log out</h3>
                </a> 
