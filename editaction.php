@@ -25,8 +25,8 @@ $data=$result->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Edit-Product</title>
    
-    <link rel="stylesheet" href="admin_addproduct.css">
-    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="css/admin_addproduct.css">
+    <link rel="stylesheet" href="css/Dashboard.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
 </head>
 

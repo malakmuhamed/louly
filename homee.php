@@ -33,14 +33,14 @@ if (!empty($_SESSION['ID'])) {
   <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,800&family=Poppins:wght@300&display=swap');
   </style>
-  <link rel="stylesheet" href="categorySection.css">
-  <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="scale.css">
-  <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="video.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="slider.css">
-  <link rel="stylesheet" href="roundedSection.css">
+  <link rel="stylesheet" href="css/categorySection.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/scale.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/video.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/roundedSection.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="b">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,7 +103,7 @@ if (!empty($_SESSION['ID'])) {
       </div>
     </div>
     <ul class="links-container">
-      <li class="link-item"><a href="home.php" class="link">home</a> </li>
+      <li class="link-item"><a href="homee.php" class="link">home</a> </li>
       <li class="link-item"><a href="crossbagsdisplay.php" class="link">Cross Bags</a> </li>
       <li class="link-item"><a href="crossbagsdisplay.php" class="link">Shoulder Bags</a> </li>
       <li class="link-item"><a href="crossbagsdisplay.php" class="link">Back packs</a> </li>
