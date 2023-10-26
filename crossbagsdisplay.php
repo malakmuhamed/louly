@@ -16,7 +16,7 @@ while($row = mysqli_fetch_assoc($select)){
 <div class="box">
     <div class="container">
         <div class="img">
-        <img src="<?php echo $row['image'];?>" height="100" alt="">
+        <img src="imgs/<?php echo $row['image'];?>" height="100" alt="">
 
 
         </div>

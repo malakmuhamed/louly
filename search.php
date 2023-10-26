@@ -10,10 +10,63 @@ include_once "includes/dbh.inc.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search users</title>
     <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"/>
+
+
 </head>
 <body>
     <!-- comment -->
     <div class="container">
+    <aside>
+            <div class="top">
+                <div class="logo">
+                   <img src="imgs/loulylogo.png">
+                </div>
+                <div class="close" id="close-button">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+               <a href="#" class="active">
+                <span class="material-icons-sharp">grid_view</span>
+                <h3>Dashboard</h3>
+               </a> 
+               <a href="search.php">
+                <span class="material-icons-sharp">person</span>
+                <h3>Users Accounts</h3>
+               </a> 
+               <a href="#">
+                <span class="material-icons-sharp">person</span>
+                <h3>Admin Accounts</h3>
+               </a> 
+               <a href="admin_addproduct.php">
+                <span class="material-icons-sharp">receipt_long</span>
+                <h3>Add product</h3>
+               </a> 
+               <a href="edits.php">
+                <span class="material-icons-sharp">insights</span>
+                <h3>Edit Product</h3>
+               </a> 
+               <a href="edits.php">
+                <span class="material-icons-sharp">mail_outline</span>
+                <h3>Delete product</h3>
+                <span class="message-count">26</span>
+               </a> 
+               
+               <a href="#">
+                <span class="material-icons-sharp">report_gmailerrorred</span>
+                <h3>Orders</h3>
+               </a> 
+               <a href="Account.php">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Log out</h3>
+               </a> 
+               
+            </div>
+           
+        </aside>
+        <main>
         <form method="post">
             <input type="text" placeholder="Search Users" name="search" >
             <button class="sbtn" name="submit">Search</button>
@@ -60,6 +113,7 @@ include_once "includes/dbh.inc.php";
                 ?>
             </table>
         </div>
+        </main>
     </div>
 </body>
 </html>

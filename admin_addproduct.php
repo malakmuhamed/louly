@@ -56,7 +56,7 @@ if(isset($_POST['add_product'])){
 <aside>
 <div class="top">
                 <div class="logo">
-                   <img src="logo.jpeg">
+                   <img src="imgs/loulylogo.png">
                     <!-- <h2><span class="danger">Jamila</span></h2>  -->
                 </div>
                 <div class="close" id="close-button">

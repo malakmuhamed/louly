@@ -35,12 +35,12 @@
         <div class="left-split">
             <div class="row">
                 <div class="column">
-                    <img class="demo cursor" src="rounded.JPG" style="width:50%">
-                    <img class="demo cursor" src="handbag.jpg" style="width:50%">
-                    <img src="waistbag.jpg" style="width:50%">
+                    <img class="demo cursor" src="imgs/rounded.JPG" style="width:50%">
+                    <img class="demo cursor" src="imgs/handbag.jpg" style="width:50%">
+                    <img src="imgs/waistbag.jpg" style="width:50%">
                 </div>
                 <div class="column2">
-                    <img src="rounded.JPG" width="175%" height="80%">
+                    <img src="imgs/rounded.JPG" width="175%" height="80%">
                 </div>
             </div>
             <div class="container">

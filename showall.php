@@ -47,7 +47,7 @@ if ($result->num_rows>0) {
        
         echo "<td>" . $row['offer'] . "</td>";
         echo "<td>" . $row['category'] . "</td>";
-        echo "<td><img src='uploaded_images/" . $row['image'] . "' alt='Selected Image' id='productImageId' width='100' height='100'></td>";
+        echo "<td><img src='imgs/" . $row['image'] . "' alt='Selected Image' id='productImageId' width='100' height='100'></td>";
 
          echo "<td>";
            "<div class='btn-group'>";

@@ -72,7 +72,7 @@ if (!empty($_SESSION['ID'])) {
     <!-- 1st container -->
     <div class="nav-div">
 
-      <img src="loulylogo.png" class="brand-logo" alt="logo is here">
+      <img src="imgs/loulylogo.png" class="brand-logo" alt="logo is here">
 
       <!-- 2nd container of items and include another container -->
 
@@ -170,7 +170,7 @@ while($row = mysqli_fetch_assoc($select)){
 <div class="product-card">
         <div class="product-image " style>
           <span class="discount-tag">50% off</span>
-          <img src="uploaded_images/<?php echo $row['image'];?>" alt="">
+          <img src="imgs/<?php echo $row['image'];?>" alt="">
 
           <button class="card-btn"> Add To Bag</button>
         </div>

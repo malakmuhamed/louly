@@ -43,11 +43,11 @@ $data=$result->fetch_assoc();
                 </div>
             </div>
             <div class="sidebar">
-               <a href="#" class="active">
+               <a href="admindashboard.php" class="active">
                 <span class="material-icons-sharp">grid_view</span>
                 <h3>Dashboard</h3>
                </a> 
-               <a href="#">
+               <a href="search.php">
                 <span class="material-icons-sharp">person</span>
                 <h3>Users Accounts</h3>
                </a> 
@@ -59,7 +59,7 @@ $data=$result->fetch_assoc();
                 <span class="material-icons-sharp">receipt_long</span>
                 <h3>Add product</h3>
                </a> 
-               <a href="#">
+               <a href="edits">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Edit Product</h3>
                </a> 
