@@ -1,5 +1,6 @@
 <?php 
-include "addtocart.html";
-
 session_start();
+
+include "html/addtocart.html";
+
 ?>

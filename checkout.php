@@ -1,5 +1,5 @@
 <?php
 session_start();
-include "checkout.html";
+include "html/checkout.html";
 ?> 
 

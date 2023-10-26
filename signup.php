@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 
 <body>
-    <?php include "signup.html"; ?>
+    <?php include "html/signup.html"; ?>
 
     <!-- Your remaining HTML content here -->
 

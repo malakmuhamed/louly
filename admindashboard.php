@@ -7,5 +7,5 @@ if (!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "admin") {
     exit();
 }
 
-include "Admin Dashboard.html";
+include "html/Admin Dashboard.html";
 ?>

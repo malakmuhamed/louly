@@ -64,7 +64,7 @@ if (!empty($errors)) {
 <html lang="en">
 
 <body>
-    <?php include "Account.html"; ?>
+    <?php include "html/Account.html"; ?>
 
     <!-- Your remaining HTML content here -->
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "makeup.html";
+include "html/makeup.html";
 @include 'includes/dbh.inc.php';
 $select=mysqli_query($conn,"SELECT * FROM productss");
 ?>
